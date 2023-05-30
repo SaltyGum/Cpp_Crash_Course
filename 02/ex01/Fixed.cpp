@@ -1,0 +1,62 @@
+# include "Fixed.hpp"
+
+Fixed::Fixed( void ) : fixed_point( 0 )
+{
+	std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed( int const val )
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->fixed_point = ( val << portion );
+}
+
+Fixed::Fixed( float const val )
+{
+	this->fixed_point = roundf( val * ( 1 << portion ) );
+	std::cout << "Float constructor called" << std::endl;
+}
+
+Fixed::~Fixed( void )
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+Fixed& Fixed::operator=( const Fixed& factor )
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	this->fixed_point = factor.getRawBits();
+	return ( *this );
+}
+
+Fixed::Fixed( const Fixed& fixed )
+{
+	std::cout << "Copy constructor called" << std::endl;
+	this->fixed_point = fixed.getRawBits();
+}
+
+int Fixed::getRawBits( void ) const
+{
+		return ( this->fixed_point );
+}
+
+void Fixed::setRawBits( int const raw )
+{
+	this->fixed_point = raw;
+}
+
+float Fixed::toFloat( void ) const
+{
+	return ( float(this->fixed_point) / (1 << portion) );
+}
+
+int Fixed::toInt( void ) const
+{
+	return ( this->fixed_point >> portion );
+}
+
+std::ostream& operator<<(std::ostream& ret, const Fixed& fixed)
+{
+	ret << fixed.toFloat();
+	return  ( ret );
+}
