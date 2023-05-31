@@ -2,7 +2,7 @@
 
 int main()
 {
-    std::string homer = "Homer";
+    std::string homer = "Homerrrr";
     std::string bart = "Bart";
     std::string marge = "Marge";
 

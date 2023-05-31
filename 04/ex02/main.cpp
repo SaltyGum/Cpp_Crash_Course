@@ -2,10 +2,11 @@
 #include "Brain.hpp"
 #include <iomanip>
 
-int main( void )
+int main()
 {
 	Animal* animals[10];
-	
+	//Animal toto;
+
 	for (int i = 0; i < 10; i++)
 	{
 		if (i >= 5)
@@ -14,7 +15,6 @@ int main( void )
 			animals[i] = new Cat();
 	}
 	Cat copy(*(Cat *)animals[0]);
-	//Cat	cat = *(Cat)animals[0];
 	std::cout << std::endl;
 	for (int i = 0; i < 100; i++)
 	{

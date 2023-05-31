@@ -31,7 +31,7 @@ ClapTrap::~ClapTrap( void )
     std::cout << "Destructor Called for " << this->name << " ClapTrap" << std::endl;
 }
 
-void ClapTrap::attack( std::string& target )
+void ClapTrap::attack( const std::string& target )
 {
     if (this->ep > 0)
     {

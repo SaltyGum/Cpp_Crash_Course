@@ -1,5 +1,5 @@
 NAME		=	fragfrag
-CC			=	g++
+CC			=	c++
 CPPFLAGS	=	-Wall -Werror -Wextra -std=c++98
 RM			=	rm -f
 
@@ -12,7 +12,7 @@ OBJS		=	$(SRCS:.cpp=.o)
 
 all:	$(NAME)
 
-$(NAME):
+$(NAME): $(SRCS)
 	$(CC) $(CPPFLAGS) $(SRCS) -c
 	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 

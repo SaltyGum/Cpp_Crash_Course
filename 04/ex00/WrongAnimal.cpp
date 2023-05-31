@@ -21,17 +21,17 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& factor)
 	return ( *this );
 }
 
-WrongAnimal::~WrongAnimal()
+WrongAnimal::~WrongAnimal( void )
 {
 	std::cout << "WrongAnimal destructor called erradicated this thing -> " << this->type << std::endl;
 }
 
-void WrongAnimal::makeSound() const
+void WrongAnimal::makeSound( void ) const
 {
 	std::cout << "Default WrongAnimal starts a sound that makes you remember the verve of the universe filling you with a deep e hollow fear" << std::endl;
 }
 
-std::string WrongAnimal::getType() const
+std::string WrongAnimal::getType( void ) const
 {
 	return ( this->type );
 }

@@ -26,11 +26,6 @@ Animal::~Animal( void )
 	std::cout << "Animal destructor called to " << this->type << std::endl;
 }
 
-void Animal::makeSound( void ) const
-{
-	std::cout << "Standard animal sound" << std::endl;
-}
-
 std::string Animal::getType( void ) const
 {
 	return ( this->type );

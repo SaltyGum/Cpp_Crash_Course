@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat( void ) : Animal("Cat")
 {
 	std::cout << "Cat(void) constructor used <-" << std::endl;
 }
@@ -18,15 +18,15 @@ Cat::Cat(const Cat& cat) : Animal(cat)
 Cat& Cat::operator=(const Cat& factor)
 {
 	this->type = factor.type;
-	return *this;
+	return ( *this );
 }
 
-Cat::~Cat()
+Cat::~Cat( void )
 {
 	std::cout << "Cat destructor (Dona Chica) called to ->" << this->type << std::endl;
 }
 
-void Cat::makeSound() const
+void Cat::makeSound( void ) const
 {
 	std::cout << "Minnnhaaauuu Minnnhaauuu" << std::endl;
 }

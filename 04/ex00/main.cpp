@@ -9,11 +9,11 @@ int main()
 	const WrongAnimal* k = new WrongCat();
 	const WrongCat* l = new WrongCat("DoomBringer");
 
-	std::cout << std::endl << i->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << k->getType() << " " << std::endl;
-	std::cout << l->getType() << " " << std::endl << std::endl;
-	i->makeSound(); //will output the cat sound!
+	std::cout << std::endl << i->getType() << " " << std::endl;//Malhado
+	std::cout << j->getType() << " " << std::endl;//Dalmatas
+	std::cout << k->getType() << " " << std::endl;//WrongCat
+	std::cout << l->getType() << " " << std::endl << std::endl;//Doombringer
+	i->makeSound();
 	j->makeSound();
 	meta->makeSound();
 	std::cout << std::endl;

@@ -14,7 +14,7 @@ public:
     ~ClapTrap               ( void );
 
     // Actions
-    void attack     ( std::string& target ); // Diff
+    void attack     ( const std::string& target ); // Diff
     void takeDamage ( unsigned int amount );
     void beRepaired  ( unsigned int amount );
 
